@@ -68,8 +68,15 @@ table {
 	border-spacing: 0;
 }
 
+:root{
+    --color-blue: #00adb5;
+}
+
 body{
     background-color: #1F2022;
+}
+main{
+    background: url(./images/background-image.png);
 }
 a{
     color: #eee;
@@ -86,7 +93,7 @@ a{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 40px 80px;
+    padding: 25px 80px;
 }
 .header-logo__link{
     font-family: "Josefin Sans", sans-serif;
@@ -100,7 +107,7 @@ a{
     row-gap: 20px;
 }
 .header-menu__link.active {  /*|для применения двойного класса, селекторы писать без пробела*/
-    color: #00adb5;
+    color: var(--color-blue);
 }
 .header-menu__link{
     font-family: "Josefin Sans", sans-serif;
@@ -133,4 +140,125 @@ a{
     .header-action{
         order: 1;
     }
+}
+.info-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    flex-wrap: wrap;
+    padding-top: 151px;
+    padding-left: 80px;
+    padding-right: 155px;
+    margin-bottom: 130px;
+}
+.photo-link__link{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 125%;
+    letter-spacing: 0.04em;
+    color: var(--color-blue);
+}
+.hallo-sector{
+    display: flex;
+    flex-direction: column;
+
+}
+.hallo-tittle{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    color: #eee
+}
+.hallo-link{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 100px;
+    letter-spacing: 0.06em;
+    color: var(--color-blue);
+}
+.hallo-info{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 187%;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.6);
+}
+@media(max-width: 1024px){
+    .info-section{
+        padding-inline: 20px;
+    }
+}
+.bottom-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-bottom: 55px;
+}
+.epilogue{
+    padding-left: 80px;
+}
+.main-jobs{
+    max-width: 800px;
+}
+.main-jobs__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.epilogue__paragraph{
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 167%;
+    color: #eee;
+}
+.epilogue__paragraph::before{
+    content: "";
+    position: absolute;
+    border: 2px solid var(--color-blue);
+    width: 20px;
+    height: 0px;
+    left: -40px;
+    top: 15px;
+}
+
+.main-jobs__heading{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+}
+.main-jobs__link{
+    padding-right: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    color: var(--color-blue);
+}
+@media(max-width: 1165px){
+    .info-section{
+        padding-top: 40px;
+        margin-bottom: 40px;
+    }
+    .bottom-section{
+        flex-wrap: wrap;
+    }
+    .epilogue{
+        margin-bottom: 30px;
+        padding-left: 20px;
+    }
+    .main-jobs{
+    max-width: 500px;
+    padding-left: 20px;
+}
+}
+@media(max-width: 600px){
+    .main-jobs{
+        max-width: 250px;}
 }
